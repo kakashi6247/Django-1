@@ -1,0 +1,1 @@
+My first Django project, done from scratch for better understanding, a Simple Login and Registration process using built-in Django resources, storing and fetching the data from database.

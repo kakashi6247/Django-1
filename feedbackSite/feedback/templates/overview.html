@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page}}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        #sidebar {
+            width: 200px;
+            background-color: #fff;
+            padding: 20px;
+            color: rgb(11, 124, 58);
+            height: 100vh;
+            position: relative;
+        }
+
+        #content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        #sidebar a {
+            display: block;
+            font-size: 35px;
+            color: black;
+            text-decoration: none;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #sidebar a:hover {
+            background-color: #178144;
+            color: black;
+        }
+
+        #vertical-line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 2px; /* Adjust the width of the line */
+            background-color: #178144; /* Color of the line */
+            z-index: 1; /* Ensure it's on top of the content */
+        }
+
+        #Logout {
+            color: red !important; /* Set the default font color */
+            text-decoration: none;
+            padding: 10px; /* Add padding for better visibility */
+            margin-top: 20px; /* Adjust margin as needed */
+            display: block; /* Ensure it's a block element */
+        }
+
+        #Logout:hover {
+            background-color: red !important;
+            color: black !important;
+        }
+
+        #page1Label {
+            font-size: 35px;
+            color: rgb(13, 145, 68);
+            text-decoration: none;
+            margin-bottom: 10px;
+            margin-bottom: 100px;
+        }
+
+        /* Checkbox Hack */
+        #page1Checkbox {
+            display: none;
+        }
+
+        #page1Checkbox:checked + #content {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <label for="page1Checkbox" id="page1Label">Overview</label>
+        <input type="checkbox" id="page1Checkbox">
+        <a href="/create_feedback/">Create Feedback</a>
+        <a href="/reporting/">Reporting</a>
+        <a id='Logout' href="/">Logout</a>
+        <!-- Add more links as needed -->
+        <div id="vertical-line"></div>
+    </div>
+
+    <div id="content">
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is the default content. Click on the links in the navigation bar to view different pages.</p>
+    </div>
+
+</body>
+</html>
